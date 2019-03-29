@@ -1,7 +1,5 @@
 Feature: As a user, I am able to check if a vehicle exists
 
-Sceanario: 
-
   Scenario: An error message is displayed if I do not enter any registration details
     Given I have launched the vehicle search website
     When I click Find Vehicle
