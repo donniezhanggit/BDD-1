@@ -7,9 +7,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Page_VehicleSearch extends Page_BasePage {
 
+	
 	public void launchBrowser() {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
+public void tearDown()
+	{		
+		driver.quit();
 	}
 
 	public void openVehicleSearchURL() {

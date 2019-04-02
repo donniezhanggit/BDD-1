@@ -26,7 +26,7 @@ public class StepDefs_VehicleSearch {
 	@Then("^the error message \"([^\"]*)\" is displayed$")
 	public void the_error_message_is_displayed(String expectedError) {
 		vehicleSearchPage.invalidRegError(expectedError);
-		driver.close();
+		vehicleSearchPage.tearDown();
 	}
 
 	@When("^I enter \"([^\"]*)\" in the search field$")
@@ -38,13 +38,14 @@ public class StepDefs_VehicleSearch {
 	@Then("^the message \"([^\"]*)\" is displayed$")
 	public void the_message_is_displayed(String noResultMessage) {
 		vehicleSearchPage.vehicleNotFound(noResultMessage);
-		driver.close();
+		vehicleSearchPage.tearDown();
 	}
 
 	@Then("^the correct details are displayed$")
 	public void the_correct_details_are_displayed() {
 		vehicleSearchPage.vehicleDtailsResult();
-		driver.close();
+		vehicleSearchPage.tearDown();
+		
 	}
 
 }
